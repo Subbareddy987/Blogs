@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+<div>
+  <form
+    action="/blogs"
+    method="POST"
+    class="mx-auto"
+    style="
+      display: grid;
+      grid-template-columns: max-content 200px 200px;
+      justify-content:center;
+      gap: 15px;
+      margin: 40px auto;
+    "
+  >
+    <label for="title">Title:</label>
+    <input type="text" name="title" required style="grid-column:2/3" />
+
+    <label for="author" style="grid-column-start: 1;">Author:</label>
+    <input type="text" name="author" required style="grid-column:2/3"/>
+    <label for="content" style="grid-column-start: 1">Content:</label>
+    <textarea name="content" rows="8" style="grid-column:2/4;width:100%" ></textarea>
+
+    <button  style="grid-column: 2; justify-self: center; margin-top: 20px;" type="submit">
+      Save
+    </button>
+ 
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
